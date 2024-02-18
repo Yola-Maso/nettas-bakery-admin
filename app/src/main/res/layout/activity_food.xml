@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".FoodActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/foodRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAddFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Food"
+        android:onClick="showAddFoodDialog"
+        android:src="@drawable/add_icon"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@android:color/white"
+        app:elevation="10dp"
+        app:pressedTranslationZ="12dp"
+        android:layout_centerInParent="true"
+        app:useCompatPadding="true"
+        android:contentDescription="Add a new item to cart"/>
+
+</RelativeLayout>

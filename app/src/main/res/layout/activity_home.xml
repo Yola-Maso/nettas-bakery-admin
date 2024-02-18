@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Home">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoryRecyclerView"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@+id/bottom_navigation"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAddCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_btn"
+        android:onClick="showAddCategoryDialog"
+        android:src="@drawable/add_icon"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@android:color/white"
+        app:elevation="10dp"
+        app:pressedTranslationZ="12dp"
+        android:layout_centerInParent="true"
+        app:useCompatPadding="true"
+        android:contentDescription="Add a new item to cart"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAddAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_btn"
+        android:onClick="showAddCategoryDialog"
+        android:src="@drawable/admin_icon"
+
+        android:backgroundTint="@android:color/white"
+        android:layout_above="@id/btnAddCategory"
+        app:elevation="10dp"
+        app:pressedTranslationZ="12dp"
+        android:layout_centerInParent="true"
+        app:useCompatPadding="true"
+        android:contentDescription="Add a new item to cart"/>
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/nav_background"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemTextColor="@drawable/nav_select"
+        app:itemIconTint="@drawable/nav_select"/>
+
+
+</RelativeLayout>
